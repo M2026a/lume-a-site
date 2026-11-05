@@ -1,0 +1,8 @@
+/* v2: inquiry email only */
+.lume-mail-contact{margin-top:32px;padding-top:27px;border-top:1px solid rgba(39,46,51,.17)}
+.lume-contact .lume-mail-button{background:#272e33;border:1px solid #272e33;color:#f5f1e9;width:min(100%,310px);min-height:58px;font-size:16px;line-height:1.5}
+.lume-contact .lume-mail-button:hover{background:#3c454b;border-color:#3c454b}
+.lume-mail-address{display:block;width:fit-content;max-width:100%;margin-top:22px;font-family:var(--font-body);font-size:15px;line-height:1.8;letter-spacing:.015em;overflow-wrap:anywhere;border-bottom:1px solid rgba(39,46,51,.3);transition:color .25s,border-color .25s}
+.lume-mail-address:hover{color:#80602e;border-color:#80602e}
+.lume-contact-copy p.lume-mail-note{margin-top:13px;font-size:13px;line-height:2;color:#616664}
+@media(max-width:1040px){.lume-mail-contact{margin-top:28px}.lume-contact .lume-mail-button{min-height:54px;font-size:15px}.lume-mail-address{font-size:14px}}
