@@ -1,0 +1,1 @@
+document.querySelectorAll('.demo-form').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const output=form.querySelector('.demo-result');output.hidden=false;output.textContent='これは操作確認用のサンプルです。入力内容は送信・保存されません。実際の制作ではご希望の問い合わせ先へ接続します。';output.focus();}));
