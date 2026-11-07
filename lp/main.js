@@ -88,6 +88,20 @@
           chips: ['自分用', '販売したい', 'お店の販促に', '8個', '16個', '24個以上'],
           ph: '例：お店の販促用に、まず8個' }
       ]
+    },
+    vba: {
+      label: 'Excel VBA',
+      qs: [
+        { q: 'Excelで、どんな作業に困っていますか？', hint: 'いつ、何を手作業でしているか、分かる範囲で教えてください。',
+          chips: ['毎月の集計', '一覧への転記', '書式をそろえる', '複数のファイルをまとめる'],
+          ph: '例：月末に担当者ごとの表を開き、数字を1つの集計表へ転記している' },
+        { q: 'どこが楽になると助かりますか？', hint: '作業の一部だけでも大丈夫です。',
+          chips: ['転記の手間を減らしたい', '入力ミスを減らしたい', '集計表を作りたい'],
+          ph: '例：数字を集めるところだけ自動にして、最後は自分で確認したい' },
+        { q: 'お使いのExcel環境は分かりますか？', hint: 'Windows・Mac・ブラウザー版など。分からなければ空欄でも大丈夫です。',
+          chips: ['Windows版', 'Mac版', 'ブラウザー版', '分からない'],
+          ph: '例：会社のWindows PCで、デスクトップ版Excelを使用' }
+      ]
     }
   };
 
@@ -97,7 +111,7 @@
   var mailBtn = root.querySelector('#ll-mail');
   var copyBtn = root.querySelector('#ll-copy');
   var status = root.querySelector('.ll-memo__status');
-  var answers = { lp: ['', '', ''], hp: ['', '', ''], stamp: ['', '', ''] };
+  var answers = { lp: ['', '', ''], hp: ['', '', ''], stamp: ['', '', ''], vba: ['', '', ''] };
 
   function kind() { return form.querySelector('input[name=kind]:checked').value; }
 
@@ -191,6 +205,12 @@
       document.body.removeChild(ta);
     }
   });
+
+  var requestedKind = new URLSearchParams(window.location.search).get('kind');
+  var choice = Array.from(form.querySelectorAll('input[name="kind"]')).find(function (input) {
+    return input.value === requestedKind;
+  });
+  if (choice) choice.checked = true;
 
   renderQs();
   refresh();

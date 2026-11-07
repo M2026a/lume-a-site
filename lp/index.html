@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -67,7 +67,7 @@
       <h2 id="ll-about-title">デザインと技術が出会う、<br>創造の一室。</h2>
       <img class="ll-about__logo" src="../assets/lume-a-wordmark.png" width="720" height="277" alt="LUME-A Studio（ルメアスタジオ）" loading="lazy">
       <p>伝えたいことを一緒に整理し、読む人が次の行動に移りやすいページに仕上げます。</p>
-      <p>ホームページ、イラスト、LINEスタンプ、業務ツールの制作も承っています。</p>
+      <p>ホームページ、イラスト、LINEスタンプの制作や、Excel VBAの小さなご相談も承っています。</p>
     </section>
 
     <section class="ll-part" id="faq" aria-label="よくある質問">
@@ -90,8 +90,8 @@
     <!-- ===== 相談シミュレーター ===== -->
     <section class="ll-sim" id="simulator" aria-labelledby="ll-sim-title">
       <p class="ll-sim__label">CONSULTATION SIMULATOR</p>
-      <h2 class="ll-sim__title" id="ll-sim-title">3つの質問に、<wbr>答えてみる。</h2>
-      <p class="ll-sim__lead">作りたいものを選んで、質問に答えるだけ。<br>答えは相談メモにまとまり、そのままメールで送れます。</p>
+      <h2 class="ll-sim__title" id="ll-sim-title">相談シミュレーター</h2>
+      <p class="ll-sim__lead">相談したいことを選んで、3つの質問に答えてください。<br>答えは相談メモにまとまり、そのままメールで送れます。</p>
 
       <form class="ll-sim__form" novalidate>
         <fieldset class="ll-step" data-step="0">
@@ -100,6 +100,7 @@
             <label class="ll-choice"><input type="radio" name="kind" value="lp" checked><span>LP<small>販売・申込のページ</small></span></label>
             <label class="ll-choice"><input type="radio" name="kind" value="hp"><span>ホームページ<small>お店や事業のサイト</small></span></label>
             <label class="ll-choice"><input type="radio" name="kind" value="stamp"><span>LINEスタンプ<small>イラスト・キャラクター</small></span></label>
+            <label class="ll-choice"><input type="radio" name="kind" value="vba"><span>Excel VBA<small>小さな手作業の自動化</small></span></label>
           </div>
         </fieldset>
 
@@ -146,6 +147,6 @@
 </div>
 <!-- ===== LUME-A Studio LP（ここまで） ===== -->
 
-<script src="main.js" defer></script>
+<script src="main.js?v=14" defer></script>
 </body>
 </html>
