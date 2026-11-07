@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="custom.css?v=14">
+  <link rel="stylesheet" href="custom.css?v=16">
   <link rel="stylesheet" href="contact-v2.css">
   <link rel="stylesheet" href="works-v6.css">
   <link rel="stylesheet" href="portfolio-v8.css">
@@ -59,7 +59,8 @@
       <div class="lume-wrap"><div class="section__head lume-section-heading" data-reveal="clip"><div><p class="lume-eyebrow">WHAT I CREATE</p><h2 id="services-title" class="lume-en-title">Services<span>できること</span></h2></div><p>伝えること。親しみを生むこと。<br>毎日の手間を、少し減らすこと。</p></div>
       <article class="lume-service" id="service-web">
         <figure class="lume-service-image" data-reveal="left"><img src="assets/web-atelier.png" width="1536" height="1024" alt="Webページの構成を考える制作机のイメージ" loading="lazy" decoding="async"><figcaption>WEB DESIGN / IMAGE VISUAL</figcaption></figure>
-        <div class="lume-service-copy" data-reveal="fade" data-reveal-delay="0.1"><span class="lume-number">01</span><p class="lume-eyebrow">WEB &amp; LANDING PAGE</p><h3>お店や事業の魅力を、<br>分かりやすく。</h3><p>ホームページやLPを、伝える内容の整理から制作します。スマートフォンでの見やすさと、次の行動につながる流れを大切にします。</p><ul class="lume-tags" aria-label="制作内容"><li>ホームページ</li><li>LP</li><li>スマートフォン対応</li></ul><a class="lume-text-link" href="lp/">LP制作の詳細・ご相談 <span aria-hidden="true">↗</span></a></div>
+        <div class="lume-service-copy" data-reveal="fade" data-reveal-delay="0.1"><span class="lume-number">01</span><p class="lume-eyebrow">WEB &amp; LANDING PAGE</p><h3>お店や事業の魅力を、<br>分かりやすく。</h3><p>ホームページやLPを、伝える内容の整理から制作します。スマートフォンでの見やすさと、次の行動につながる流れを大切にします。</p><ul class="lume-tags" aria-label="制作内容"><li>ホームページ</li><li>LP</li><li>スマートフォン対応</li></ul><a class="lume-text-link" href="lp/">LP制作の詳細・ご相談 <span aria-hidden="true">↗</span></a>
+          <div class="lume-service-quick"><a href="lp/#simulator">相談シミュレーター <span aria-hidden="true">↗</span></a><small>3つの質問で相談メモを作成</small></div></div>
       </article>
       <article class="lume-service lume-service--reverse" id="service-illustration">
         <figure class="lume-service-image" data-reveal="right"><img src="assets/illustration-atelier.png" width="1536" height="1024" alt="犬のキャラクターを紙に描いたイラスト制作のイメージ" loading="lazy" decoding="async"><figcaption>ILLUSTRATION / IMAGE VISUAL</figcaption></figure>
@@ -89,6 +90,16 @@
 <p id="stamp-empty" class="lume-stamp-empty" hidden>この組み合わせの見本は、まだ掲載していません。犬種か言葉を「すべて」にしてご覧ください。</p>
 <p class="lume-stamp-note">販売名義：にこっと小箱。ショップ未掲載の作品は制作サンプルとして紹介しています。</p>
 <div class="lume-work-footer"><p>ほかの絵柄やシリーズも、作者ショップでご覧いただけます。</p><div class="lume-shop-links"><a href="https://line.me/S/shop/sticker/author/6751697" target="_blank" rel="noopener noreferrer">スタンプ一覧を見る ↗</a><a href="https://line.me/S/shop/emoji/author/13138739" target="_blank" rel="noopener noreferrer">絵文字一覧を見る ↗</a></div></div>
+      <section id="stamp-request" class="lume-stamp-request" aria-labelledby="stamp-request-title">
+        <p class="lume-eyebrow">STAMP REQUEST</p>
+        <h3 id="stamp-request-title">こんなスタンプがほしい</h3>
+        <p>犬種や入れてほしい言葉、使いたい場面など、アイデアをひとことお聞かせください。</p>
+        <label for="stamp-request-text">スタンプのリクエスト（200文字まで）</label>
+        <textarea id="stamp-request-text" rows="3" maxlength="200" placeholder="例：ダックスで「今から帰る」がほしい"></textarea>
+        <a id="stamp-request-mail" class="lume-text-link" aria-disabled="true">メールの下書きを開く <span aria-hidden="true">↗</span></a>
+        <p class="lume-stamp-request-note">送信はメールアプリから行ってください。いただいたご希望は制作の参考にします。</p>
+        <noscript><p><a href="mailto:lumea.studio.works@gmail.com">メールでリクエストする</a></p></noscript>
+      </section>
 </div></section>
 
     <section class="section lume-approach" id="approach" aria-labelledby="approach-title">
@@ -113,5 +124,6 @@
   <script src="script.js" defer></script>
   <script src="custom.js" defer></script>
   <script src="stamps-v9.js" defer></script>
+  <script src="stamp-request.js" defer></script>
 </body>
 </html>

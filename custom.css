@@ -30,3 +30,17 @@ html:not(.lume-js) [data-reveal]{opacity:1;transform:none;clip-path:none}
 :root{--fw-display:500;--fw-body:400;--fw-strong:700;--ls-en:.12em}
 @media(min-width:1041px){.lume-service-image{position:sticky;top:40px;align-self:start}}
 @media(prefers-reduced-motion:reduce){.lume-service-image{position:relative;top:auto}}
+
+.lume-service-quick{display:flex;flex-wrap:wrap;align-items:center;column-gap:12px;margin-top:4px;font-size:12px;line-height:1.6}
+.lume-service-quick a{display:inline-flex;gap:6px;align-items:center;min-height:36px;text-decoration:underline;text-underline-offset:3px}
+.lume-service-quick a:hover{color:#896633}
+.lume-service-quick small{font-size:inherit}
+
+.lume-stamp-request{margin-top:32px;padding:22px;border:1px solid var(--line);max-width:940px}
+.lume-stamp-request h3{font-size:20px;margin:5px 0 8px}
+.lume-stamp-request p,.lume-stamp-request label{font-size:13px;line-height:1.8}
+.lume-stamp-request label{display:block;margin-top:15px}
+.lume-stamp-request textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;border:1px solid #c8c1b5;background:#faf8f3;color:#272e33;font:inherit;font-size:16px;resize:vertical}
+.lume-stamp-request .lume-text-link{margin-top:5px}
+.lume-stamp-request .lume-text-link[aria-disabled="true"]{opacity:.55;cursor:default}
+.lume-stamp-request .lume-stamp-request-note{font-size:12px;margin-top:8px}
