@@ -1,0 +1,111 @@
+/* 相談シミュレーター（トップの style.css の上に重ねる） */
+.consult .bar { transform: none; }
+.bar__back {
+  margin-left: auto; min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px;
+  border: 1px solid rgba(200, 168, 122, .5); color: var(--cream); text-decoration: none; font-size: 14px;
+}
+@media (min-width: 900px) { .bar__back { margin-left: 8px; } }
+.consult main { padding-top: 56px; }
+
+.c-label { margin: 0 0 8px; font-family: var(--serif); font-size: 12px; letter-spacing: .3em; color: var(--gold); }
+.c-label::before { content: ""; display: inline-block; width: 28px; height: 1px; background: var(--gold); vertical-align: middle; margin-right: 10px; }
+
+/* 上部：CTAと同じアトリエの写真に文字を重ねる */
+.c-hero { position: relative; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end; }
+.c-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% 50%; }
+.c-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27, 29, 33, .25) 0%, rgba(27, 29, 33, .55) 45%, rgba(27, 29, 33, .96) 100%);
+}
+.c-hero__in { position: relative; z-index: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 120px 16px 40px; }
+.c-title { margin: 0 0 16px; font-family: var(--serif); font-weight: 300; font-size: clamp(34px, 8vw, 56px); line-height: 1.45; color: var(--cream); }
+.c-lead { margin: 0 0 24px; color: #CFC6B8; font-size: 16px; word-break: keep-all; overflow-wrap: anywhere; }
+@media (max-width: 599px) { .c-lead br.pc { display: none; } }
+.c-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; color: var(--cream); }
+.c-steps li { display: flex; align-items: center; gap: 10px; }
+.c-steps span {
+  display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gold); color: #fff; font-family: var(--serif); font-size: 14px;
+}
+
+/* 本体：左に質問、右にメモ（PC） */
+.c-sim {
+  max-width: 1040px; margin: 0 auto; padding: 40px 16px 64px;
+  display: grid; gap: 32px; grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .c-sim { grid-template-columns: minmax(0, 1fr) 380px; align-items: start; }
+  .c-memo { position: sticky; top: 80px; }
+}
+.c-form { display: grid; gap: 20px; }
+.c-step {
+  margin: 0; padding: 22px 18px 20px; border: 1px solid rgba(200, 168, 122, .22); background: #262930;
+}
+.c-step legend { padding: 0; float: left; width: 100%; margin-bottom: 14px; font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--cream); }
+.c-step legend label { cursor: pointer; }
+.c-step legend + * { clear: both; }
+.c-no {
+  display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 10px; border-radius: 50%;
+  border: 1px solid var(--gold); color: var(--gold); font-size: 14px; vertical-align: 2px;
+}
+.c-hint { margin: 0 0 12px; font-size: 14px; color: var(--gray); }
+
+.c-kinds { display: grid; gap: 10px; grid-template-columns: 1fr; }
+@media (min-width: 600px) { .c-kinds { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .c-kinds { grid-template-columns: repeat(3, 1fr); } }
+.c-kind { position: relative; display: block; cursor: pointer; }
+.c-kind input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.c-kind span {
+  display: block; min-height: 64px; padding: 12px 14px; border: 1px solid rgba(200, 168, 122, .3); background: #2C2F35;
+  transition: border-color .2s, background .2s;
+}
+.c-kind b { display: block; font-weight: 400; font-size: 15px; color: var(--cream); }
+.c-kind small { display: block; font-size: 12px; color: var(--gray); line-height: 1.6; }
+.c-kind input:checked + span { border-color: var(--gold); background: rgba(200, 168, 122, .14); box-shadow: inset 3px 0 0 var(--gold); }
+.c-kind input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.c-qs { display: grid; gap: 20px; }
+.c-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.c-chip {
+  min-height: 44px; padding: 0 14px; border: 1px solid rgba(200, 168, 122, .45); border-radius: 999px; background: none;
+  color: var(--cream); font: inherit; font-size: 13px; cursor: pointer; transition: background .2s;
+}
+.c-chip::before { content: "+ "; color: var(--gold); }
+.c-chip:hover { background: rgba(200, 168, 122, .14); }
+.c-chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.c-step textarea, .c-field input, .c-field select {
+  width: 100%; padding: 12px 14px; border: 1px solid rgba(183, 174, 161, .35); background: #1F2125; color: var(--cream);
+  font: inherit; font-size: 16px; line-height: 1.7; border-radius: 0;
+}
+.c-step textarea { min-height: 96px; resize: vertical; }
+.c-step textarea::placeholder, .c-field input::placeholder { color: #7D766C; }
+.c-step textarea:focus, .c-field input:focus, .c-field select:focus { outline: none; border-color: var(--gold); }
+.c-field { display: block; font-size: 14px; color: var(--gray); margin-bottom: 14px; }
+.c-field input, .c-field select { margin-top: 6px; min-height: 48px; }
+.c-two { display: grid; gap: 0 16px; grid-template-columns: 1fr; }
+@media (min-width: 600px) { .c-two { grid-template-columns: 1fr 1fr; } }
+
+/* メモ：クリームの紙 */
+.c-memo { background: var(--cream); color: var(--sumi); padding: 24px 20px 20px; border-top: 3px solid var(--gold); }
+.c-memo .c-label { color: var(--gold-d); }
+.c-memo .c-label::before { background: var(--gold-d); }
+.c-memo__title { margin: 0 0 12px; font-family: var(--serif); font-weight: 300; font-size: 22px; }
+.c-memo__body {
+  margin: 0 0 16px; padding: 14px; background: #FBF8F3; border: 1px solid #E2D9CA; white-space: pre-wrap; word-break: break-word;
+  font-family: var(--sans); font-size: 14px; line-height: 1.8; max-height: 52vh; overflow: auto;
+}
+.c-memo__actions { display: grid; gap: 10px; }
+.c-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 16px;
+  font: inherit; font-size: 15px; text-decoration: none; cursor: pointer; border: 1px solid transparent;
+}
+.c-btn--main { background: var(--gold-d); color: #fff; font-weight: 400; }
+.c-btn--main:hover { background: #96733F; }
+.c-btn--sub { background: none; border-color: var(--gold-d); color: var(--sumi); }
+.c-btn--sub:hover { background: var(--kinari); }
+.c-memo__note { margin: 14px 0 0; font-size: 12px; line-height: 1.8; color: var(--sumi-2); }
+.c-memo__status { margin: 6px 0 0; min-height: 1.5em; font-size: 13px; color: var(--gold-d); }
+
+.consult .foot { padding-bottom: 48px; }
+.consult .foot a { color: var(--cream); }

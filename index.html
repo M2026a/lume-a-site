@@ -1,129 +1,145 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LUME-A Studio | 伝えるデザインと、仕事を軽くする仕組み。</title>
-  <meta name="description" content="LUME-A Studio（ルメアスタジオ）は、デザインと技術をつなぐ制作アトリエ。ホームページ・LP、イラスト・LINEスタンプ、Excel VBAによる小さな業務自動化を紹介します。">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#272e33">
-  <meta property="og:title" content="LUME-A Studio | Design & Development">
-  <meta property="og:description" content="伝えるデザインと、仕事を軽くする仕組み。デザインと技術が出会う、創造の一室。">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="assets/fv-hero.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="custom.css?v=16">
-  <link rel="stylesheet" href="contact-v2.css">
-  <link rel="stylesheet" href="works-v6.css">
-  <link rel="stylesheet" href="portfolio-v8.css">
-  <link rel="stylesheet" href="stamps-v9.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUME-A Studio | 伝えるデザインと、仕事を軽くする仕組み。</title>
+<meta name="description" content="LUME-A Studio（ルメアスタジオ）は、ホームページ・LP・バナー・縦動画のデザインと、業務アプリやExcel VBAなど仕事を軽くする小さな仕組みを制作するアトリエです。">
+<meta property="og:title" content="LUME-A Studio | 伝えるデザインと、仕事を軽くする仕組み。">
+<meta property="og:description" content="ホームページ・LP・バナーのデザインから、Excelの手作業を減らす小さな仕組みまで。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://lume-a.com/images/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B1D21">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2323262B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='%23C8A87A'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="lume-site">
-  <a class="lume-skip" href="#main">本文へ移動</a>
-  <header class="site-header lume-header">
-    <a class="brand lume-brand" href="#top" aria-label="LUME-A Studio トップへ"><img src="assets/lume-a-wordmark.png" width="720" height="277" alt="LUME-A Studio"></a>
-    <nav class="nav lume-nav" aria-label="主要ナビゲーション"><a href="#services">Services</a><a href="#works">Works</a><a href="#approach">Approach</a><a href="#studio">Studio</a><a href="#contact">Contact</a></nav>
-    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
-  </header>
-  <div class="nav-overlay" id="mobile-menu" aria-hidden="true" inert>
-    <nav aria-label="モバイルナビゲーション"><a href="#services">Services <small>できること</small></a><a href="#works">Works <small>作品集</small></a><a href="#approach">Approach <small>つくり方</small></a><a href="#studio">Studio <small>アトリエについて</small></a><a href="#contact">Contact <small>ご相談について</small></a></nav>
-    <p class="lume-menu-note">デザインと技術が出会う、創造の一室。</p>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="bar" id="bar" aria-label="サイトのメニュー">
+  <a class="bar__logo" href="#top"><img src="assets/lume-a-wordmark.png" alt="LUME-A Studio" width="720" height="276"></a>
+  <nav class="bar__nav" aria-label="ページ内リンク">
+    <a href="#services">できること</a>
+    <a href="#works">作品</a>
+    <a href="#stamps">スタンプ</a>
+    <a href="#faq">質問</a>
+  </nav>
+  <a class="bar__cta" href="consult/">相談する</a>
+</header>
+
+<p class="side-mark" aria-hidden="true">LUME-A STUDIO — A ROOM FOR IDEAS</p>
+<nav class="side-nav" aria-label="セクション">
+  <a href="#top">はじめに</a>
+  <a href="#concerns">よくある悩み</a>
+  <a href="#services">できること</a>
+  <a href="#works">作品</a>
+  <a href="#flow">制作の流れ</a>
+  <a href="#stamps">LINEスタンプ</a>
+  <a href="#faq">よくある質問</a>
+  <a href="#contact">相談する</a>
+</nav>
+
+<main id="main">
+  <section class="sec" id="top">
+    <h1 class="sr">伝えるデザインと、仕事を軽くする仕組み。LUME-A Studio</h1>
+    <div class="shot">
+      <img src="images/01-fv.webp" width="1024" height="1792" alt="LUME-A Studio。伝えるデザインと、仕事を軽くする仕組み。ホームページ・LP・バナーのデザインから、Excelの手作業を減らす小さな仕組みまで。目的の整理から、一緒にかたちにします。領域：DESIGN ホームページ・LP・バナー、MOVIE 縦動画、TOOLS 業務アプリ・Excel VBA。掲載している制作見本は、すべて架空の自主制作です。" fetchpriority="high">
+      <a class="hit" style="left:6%;top:86.5%;width:53%;height:7%" href="consult/">制作の相談をしてみる（3つの質問で相談メモ）</a>
+    </div>
+  </section>
+
+  <section class="sec" id="concerns">
+    <div class="shot">
+      <img src="images/02-pain.webp" width="1024" height="1792" loading="lazy" alt="いい仕事をしているのに、ちゃんと伝わっていない。小さなお店や事業で、よく聞く3つのもったいない。01 お店のよさが、ページから伝わらない。02 スマホで見ると、とても読みにくい。03 毎月のExcel作業に、時間がとられる。伝えることと、手間を減らすこと。どちらも、ひとつのアトリエで。">
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="shot">
+      <img src="images/03-offer.webp" width="1024" height="1792" loading="lazy" alt="見せる仕事と、減らす仕事。01 伝えるデザイン：ホームページ・LP。02 伝えるデザイン：バナー・縦動画。03 仕事を軽くする仕組み：業務アプリ・ダッシュボード。04 仕事を軽くする仕組み：Excel VBAの小さな改善。イラストやLINEスタンプの制作も行っています。">
+    </div>
+  </section>
+
+  <section class="sec" id="works">
+    <div class="shot">
+      <img src="images/04-works.webp" width="1024" height="1792" loading="lazy" alt="WORKS。業種に合わせて、かたちを変える。TYPE A さわれるWebページ：ページを移動できるHP・LPを、公開できるかたちでお作りします。TYPE B LPデザイン＋縦動画：販売ページや申込ページを、完成デザインと縦動画で。">
+    </div>
+    <div class="panel panel--dark">
+      <div class="panel__in">
+        <h2 class="ph"><span class="ph__en">TYPE A</span>さわれるWebページ</h2>
+        <p class="pl">ページを移動できる見本です。タップすると開きます。</p>
+        <ul class="grid grid--a" id="typeA"></ul>
+        <h2 class="ph"><span class="ph__en">TYPE B</span>LPデザイン＋縦動画</h2>
+        <p class="pl">タップすると、縦動画とLPの全体を見られます。</p>
+        <ul class="grid grid--b" id="typeB"></ul>
+        <p class="note">※掲載している制作見本は、すべて架空の自主制作です。業種・目的・ページ構成の見本として掲載しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="flow">
+    <div class="shot">
+      <img src="images/05-flow.webp" width="1024" height="1792" loading="lazy" alt="HOW I WORK。つくる前に、目的をそろえる。1 LISTEN 聞く・整理する：何を伝えたいか、どこに手間があるか。会話から一緒に整理します。2 CREATE かたちにする：目的に合わせて構成と表現を設計し、確認できるかたちでお見せします。3 REFINE 確かめる・整える：見る人・使う人の目線で確かめ、細部まで整えて仕上げます。">
+    </div>
+  </section>
+
+  <section class="sec" id="stamps">
+    <div class="shot">
+      <img src="images/06-stamps.webp" width="1024" height="1792" loading="lazy" alt="LINE STICKERS。イラストのLINEスタンプ、販売中は19点。犬種と言葉の種類から選べる、日常づかいのスタンプです。販売名義はにこっと小箱です。日常の返事、丁寧な敬語、家族連絡。犬種：チワワ、ダックス、ゴールデン、トイプードル、バーニーズ、シェルティほか。">
+    </div>
+    <div class="panel panel--light">
+      <div class="panel__in">
+        <ul class="grid grid--s is-folded" id="stampList"></ul>
+        <button type="button" class="more" id="stampMore" aria-controls="stampList" aria-expanded="false">すべてのスタンプを見る（20点）</button>
+        <p class="links">
+          <a href="https://line.me/S/shop/sticker/author/6751697" target="_blank" rel="noopener">スタンプ一覧を見る ↗</a>
+          <a href="https://line.me/S/shop/emoji/author/13138739" target="_blank" rel="noopener">絵文字一覧を見る ↗</a>
+        </p>
+        <p class="note note--dark">販売名義：にこっと小箱。ショップ未掲載の作品は制作サンプルとして紹介しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="shot">
+      <img src="images/07-faq.webp" width="1024" height="1792" loading="lazy" alt="よくいただく、4つの質問。Q 何から話せばいいか、まとまっていません。A 大丈夫です。3つの質問に答える相談シミュレーターで、相談メモを作れます。Q Excelのどんな作業を相談できますか？ A 毎月の集計、一覧の転記、決まった書式への入力など。作業の流れとExcel環境を伺い、対応できるかお答えします。Q 掲載の見本は、実在のお店ですか？ A すべて架空の自主制作です。業種・目的・ページ構成の見本として掲載しています。Q イラストやLINEスタンプも頼めますか？ A はい。用途に合わせて、表情や言葉の温度感を整えてお作りします。">
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="shot">
+      <img src="images/08-cta.webp" width="1024" height="1792" loading="lazy" alt="「こんなこと、できる？」から。まだ形になっていない相談も、歓迎です。3つの質問に答えると、相談メモができます。">
+      <a class="hit" style="left:7%;top:80%;width:86%;height:6.2%" href="consult/">相談シミュレーターを開く（約1分）</a>
+      <a class="hit" style="left:7%;top:87.6%;width:86%;height:5.4%" href="mailto:lumea.studio.works@gmail.com?subject=%E5%88%B6%E4%BD%9C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで相談する</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__mail">相談先：<a href="mailto:lumea.studio.works@gmail.com">lumea.studio.works@gmail.com</a>
+    <button type="button" class="copy" data-copy="lumea.studio.works@gmail.com">コピー</button></p>
+  <p class="foot__small">ボタンを押すと、お使いのメールアプリが開きます。</p>
+  <p class="foot__small">© LUME-A Studio</p>
+</footer>
+
+<div class="dock" id="dock"><a href="consult/">制作の相談をしてみる →</a></div>
+
+<dialog class="viewer" id="viewer" aria-label="作品を見る">
+  <div class="viewer__in">
+    <button type="button" class="viewer__close" id="viewerClose" aria-label="閉じる">×</button>
+    <p class="viewer__kind" id="viewerKind"></p>
+    <h3 class="viewer__title" id="viewerTitle"></h3>
+    <video id="viewerVideo" playsinline muted controls preload="none"></video>
+    <a class="viewer__full" id="viewerFull" href="#" target="_blank" rel="noopener">LPの全体を見る ↗</a>
+    <p class="viewer__note">架空の自主制作です。</p>
   </div>
-  <main id="main">
-    <section class="hero lume-hero" id="top" aria-labelledby="hero-title">
-      <div class="hero__stage">
-        <div class="hero__copy">
-          <p class="lume-kicker" data-reveal="fade">Design &amp; Development</p>
-          <h1 id="hero-title"><span class="l"><span>伝えるデザインと、</span></span><span class="l"><span>仕事を軽くする仕組み。</span></span></h1>
-          <p class="hero__lead" data-reveal="fade" data-reveal-delay="0.12">ホームページ、イラスト、日々の小さな自動化まで。</p>
-          <div class="hero__actions" data-reveal="fade" data-reveal-delay="0.24"><a class="lume-button lume-button--outline" href="#services"><span>できることを見る</span><span class="lume-arrow" aria-hidden="true">⟶</span></a></div>
-        </div>
-        <div class="hero__photo-wrap"><img class="hero__photo" src="assets/fv-hero.jpg" width="510" height="710" alt="光を受ける透明な角柱とゴールドの輪。技術と感性を表すブランドビジュアル" fetchpriority="high"></div>
-        <p class="lume-hero-aside">Ideas<br>into form.</p>
-        <div class="lume-domains" aria-label="制作領域"><a href="#service-web">Web &amp; LP</a><a href="#service-illustration">Illustration &amp; LINE</a><a href="#service-tool">Excel VBA</a></div>
-      </div>
-    </section>
+</dialog>
 
-    <section class="section lume-intro" id="concept" aria-labelledby="intro-title">
-      <div class="lume-wrap lume-intro-grid">
-        <div class="section__head" data-reveal="clip"><p class="lume-eyebrow">A ROOM FOR IDEAS</p><h2 id="intro-title">デザインと技術が出会う、<br>創造の一室。</h2></div>
-        <div class="lume-prose" data-reveal="fade" data-reveal-delay="0.12"><p>LUME-A Studioは、自由な発想を<br class="lume-desktop-break">かたちにする制作アトリエです。</p><p>見た目の心地よさと、使う人にとっての分かりやすさ。<br class="lume-desktop-break">その両方を大切に、デザインから小さな自動化まで、<br class="lume-desktop-break">アイデアを使えるかたちへ整えます。</p><a class="lume-text-link" href="#studio">LUME-A Studioについて <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section lume-services" id="services" aria-labelledby="services-title">
-      <div class="lume-wrap"><div class="section__head lume-section-heading" data-reveal="clip"><div><p class="lume-eyebrow">WHAT I CREATE</p><h2 id="services-title" class="lume-en-title">Services<span>できること</span></h2></div><p>伝えること。親しみを生むこと。<br>毎日の手間を、少し減らすこと。</p></div>
-      <article class="lume-service" id="service-web">
-        <figure class="lume-service-image" data-reveal="left"><img src="assets/web-atelier.png" width="1536" height="1024" alt="Webページの構成を考える制作机のイメージ" loading="lazy" decoding="async"><figcaption>WEB DESIGN / IMAGE VISUAL</figcaption></figure>
-        <div class="lume-service-copy" data-reveal="fade" data-reveal-delay="0.1"><span class="lume-number">01</span><p class="lume-eyebrow">WEB &amp; LANDING PAGE</p><h3>お店や事業の魅力を、<br>分かりやすく。</h3><p>ホームページやLPを、伝える内容の整理から制作します。スマートフォンでの見やすさと、次の行動につながる流れを大切にします。</p><ul class="lume-tags" aria-label="制作内容"><li>ホームページ</li><li>LP</li><li>スマートフォン対応</li></ul><a class="lume-text-link" href="lp/">LP制作の詳細・ご相談 <span aria-hidden="true">↗</span></a>
-          <div class="lume-service-quick"><a href="lp/#simulator">相談シミュレーター <span aria-hidden="true">↗</span></a><small>3つの質問で相談メモを作成</small></div></div>
-      </article>
-      <article class="lume-service lume-service--reverse" id="service-illustration">
-        <figure class="lume-service-image" data-reveal="right"><img src="assets/illustration-atelier.png" width="1536" height="1024" alt="犬のキャラクターを紙に描いたイラスト制作のイメージ" loading="lazy" decoding="async"><figcaption>ILLUSTRATION / IMAGE VISUAL</figcaption></figure>
-        <div class="lume-service-copy" data-reveal="fade" data-reveal-delay="0.1"><span class="lume-number">02</span><p class="lume-eyebrow">ILLUSTRATION &amp; LINE</p><h3>らしさが伝わる、<br>親しみのある表現を。</h3><p>LINEスタンプ、イラスト、キャラクターなど、日常のコミュニケーションに彩りを添える制作。用途に合わせて、表情や言葉の温度感を整えます。</p><ul class="lume-tags" aria-label="制作内容"><li>LINEスタンプ</li><li>イラスト</li><li>キャラクター</li></ul><a class="lume-text-link" href="#contact">イラスト制作のご相談について <span aria-hidden="true">↗</span></a></div>
-      </article>
-      <article class="lume-service" id="service-tool">
-        <figure class="lume-service-image" data-reveal="left"><img src="assets/automation-light.png" width="1536" height="1024" alt="タイルが整然と並ぶ、作業の整理と自動化のイメージ" loading="lazy" decoding="async"><figcaption>TOOLS &amp; AUTOMATION / IMAGE VISUAL</figcaption></figure>
-        <div class="lume-service-copy" data-reveal="fade" data-reveal-delay="0.1"><span class="lume-number">03</span><p class="lume-eyebrow">EXCEL VBA</p><h3>Excelの小さな手間、<br>ご相談ください。</h3><p>毎月の集計、一覧の転記、決まった書式への入力など。仕事で繰り返しているExcelの手作業を、小さなVBAで減らせることがあります。</p><p class="lume-service-note">作業の流れとお使いのExcel環境を伺い、対応できるかお答えします。</p><ul class="lume-tags" aria-label="相談できる作業の例"><li>Excel VBA</li><li>集計・転記</li><li>定型作業</li></ul><a class="lume-text-link" href="lp/?kind=vba#simulator">Excel VBAを相談する <span aria-hidden="true">↗</span></a></div>
-      </article><p class="lume-image-note">掲載画像は制作領域を伝えるためのイメージビジュアルです。</p></div>
-    </section>
-
-<section class="section lume-works" id="works" aria-labelledby="works-title">
-<div class="lume-wrap"><div class="section__head lume-section-heading"><div><p class="lume-eyebrow">SELECTED WORKS</p><h2 id="works-title">HP・LPと、<br>LINEスタンプ。</h2></div><p>業種や目的に合わせたWebの見本と、<br>販売中のLINEスタンプ。</p></div>
-<div class="lume-portfolio-group"><h3 class="lume-portfolio-label">HOMEPAGE <span>ページを移動できる3つの見本</span></h3><div class="lume-work-grid lume-lp-list"><article class="lume-work-card lume-lp-card"><a href="samples/hp-muku/"><div class="lume-work-visual"><img src="samples/hp-muku/preview.png" width="1200" height="850" alt="café mukuの自主制作サンプル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">店舗型HP・3ページ／自主制作</p><h3>café muku</h3><p class="lume-lp-description">トップ・メニュー・お店について。写真で伝える店舗サイト。</p><span class="lume-work-store">HPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-lp-card"><a href="samples/hp-clean/"><div class="lume-work-visual"><img src="samples/hp-clean/preview.png" width="1200" height="850" alt="クリーンホームの自主制作サンプル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">地域サービス型HP・3ページ／自主制作</p><h3>クリーンホーム</h3><p class="lume-lp-description">サービス・料金・依頼の流れから、相談画面まで。</p><span class="lume-work-store">HPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-lp-card"><a href="samples/hp-minato/"><div class="lume-work-visual"><img src="samples/hp-minato/preview.png" width="1200" height="850" alt="MINATO WORKSの自主制作サンプル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">企業型HP・3ページ／自主制作</p><h3>MINATO WORKS</h3><p class="lume-lp-description">事業案内・会社情報・問い合わせをまとめた企業サイト。</p><span class="lume-work-store">HPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article></div></div><div class="lume-portfolio-group"><h3 class="lume-portfolio-label">LANDING PAGE <span>予約・相談に絞った4つの見本</span></h3>
-<div class="lume-work-grid lume-lp-list"><article class="lume-work-card lume-lp-card"><a href="samples/clean/"><div class="lume-work-visual"><img src="samples/clean/page.png" width="724" height="2172" alt="クリーンホームの自主制作サンプル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">清掃・見積もり案内LP／自主制作</p><h3>クリーンホーム</h3><p class="lume-lp-description">料金と依頼の流れを見せて、相談へつなぐページ。</p><span class="lume-work-store">LPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-lp-card"><a href="samples/gym/"><div class="lume-work-visual"><img src="samples/gym/page.png" width="724" height="2172" alt="PERSONAL GYM FITの自主制作サンプル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">ジム・体験案内LP／自主制作</p><h3>PERSONAL GYM FIT</h3><p class="lume-lp-description">体験内容・プラン・申込の流れを分かりやすく。</p><span class="lume-work-store">LPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article>
-<article class="lume-work-card lume-lp-card"><a href="samples/nico/"><div class="lume-work-visual"><img src="samples/nico/page.png" width="724" height="2172" alt="nail salon nicoのサロンLPサムネイル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">美容サロン・予約案内LP／自主制作</p><h3>nail salon nico</h3><p class="lume-lp-description">施術写真・料金・予約の流れを、ひとつのページに。</p><span class="lume-work-store">LPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article>
-<article class="lume-work-card lume-lp-card"><a href="samples/muku/"><div class="lume-work-visual"><img src="samples/muku/page.png" width="724" height="2172" alt="café mukuのカフェLPサムネイル" loading="lazy"></div><div class="lume-work-info"><p class="lume-work-kind">カフェ・店舗紹介LP／自主制作</p><h3>café muku</h3><p class="lume-lp-description">写真とメニューで、お店の雰囲気を伝えるページ。</p><span class="lume-work-store">LPサンプルを見る <span aria-hidden="true">↗</span></span></div></a></article>
-</div><p class="lume-portfolio-note">すべて架空の自主制作です。業種・目的・ページ構成の見本として掲載しています。</p><a class="lume-text-link" href="#contact">この見本をもとに制作を相談する <span aria-hidden="true">↗</span></a></div>
-<h3 id="stamp-samples" class="lume-portfolio-label lume-line-label">LINE STICKERS <span>犬種と言葉のバリエーション</span></h3>
-<p class="lume-stamp-intro">日常の返事から、丁寧な敬語・家族への連絡まで。<br>犬種と言葉の種類から、気になる作品をご覧いただけます。</p>
-<div class="lume-stamp-filters" aria-label="スタンプ作品の絞り込み">
-<label for="stamp-breed">犬種・キャラクター<select id="stamp-breed" aria-controls="stamp-list"><option value="all">すべて</option><option value="chihuahua">チワワ</option><option value="dachshund">ダックス</option><option value="golden">ゴールデン</option><option value="poodle">トイプードル</option><option value="berner">バーニーズ</option><option value="sheltie">シェルティ</option><option value="cat">茶トラ猫（参考）</option></select></label>
-<label for="stamp-words">言葉<select id="stamp-words" aria-controls="stamp-list"><option value="all">すべての言葉</option><option value="daily">日常の返事</option><option value="keigo">丁寧な敬語</option><option value="family">家族連絡</option><option value="support">気づかい・応援</option><option value="season">季節の言葉</option><option value="camera">カメラ</option></select></label>
-<button id="stamp-reset" type="button">すべて見る</button></div>
-<p id="stamp-count" class="lume-stamp-count" aria-live="polite">20点を表示｜販売中19点・制作サンプル1点</p>
-<div id="stamp-list" class="lume-work-grid"><article class="lume-work-card lume-stamp-card" data-breed="berner" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37800771/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37800771.png" width="240" height="240" alt="動く♪バーニーズの日常①のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">バーニーズ / 日常の返事 / 動くスタンプ</p><h3>動く♪バーニーズの日常①</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="chihuahua" data-words="keigo" data-status="selling"><a href="https://store.line.me/stickershop/product/37329690/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329690.png" width="240" height="240" alt="チワワの大きな文字・丁寧な敬語40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">チワワ / 丁寧な敬語 / LINEスタンプ</p><h3>チワワの大きな文字・丁寧な敬語40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="poodle" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37635927/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37635927.png" width="240" height="240" alt="動く♪ふわもこトイプードルの日常①のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">トイプードル / 日常の返事 / 動くスタンプ</p><h3>動く♪ふわもこトイプードルの日常①</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="sheltie" data-words="daily" data-status="sample"><a href="assets/work-sheltie-thanks.png" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-sheltie-thanks.png" width="320" height="270" alt="シェルティ「ありがとう！」のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">シェルティ / 日常の返事 / 制作サンプル・ショップ未掲載</p><h3>シェルティ「ありがとう！」</h3><span class="lume-work-store">拡大して見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="golden" data-words="family" data-status="selling"><a href="https://store.line.me/stickershop/product/37329983/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329983.png" width="240" height="240" alt="ゴールデンの家族連絡40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ゴールデン / 家族連絡 / LINEスタンプ</p><h3>ゴールデンの家族連絡40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="keigo" data-status="selling"><a href="https://store.line.me/stickershop/product/37352565/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37352565.png" width="240" height="240" alt="ブラックタンダックスの丁寧な敬語40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 丁寧な敬語 / LINEスタンプ</p><h3>ブラックタンダックスの丁寧な敬語40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="chihuahua" data-words="support" data-status="selling"><a href="https://store.line.me/stickershop/product/37419871/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37419871.png" width="240" height="240" alt="チワワ やさしい気づかいと応援40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">チワワ / 気づかい・応援 / LINEスタンプ</p><h3>チワワ やさしい気づかいと応援40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="golden" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37575769/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37575769.png" width="240" height="240" alt="動く♪ゴールデンの日常①のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ゴールデン / 日常の返事 / 動くスタンプ</p><h3>動く♪ゴールデンの日常①</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="poodle" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37588826/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37588826.png" width="240" height="240" alt="動く♪こげ茶トイプードルの日常②のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">トイプードル / 日常の返事 / 動くスタンプ</p><h3>動く♪こげ茶トイプードルの日常②</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="chihuahua" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37575766/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37575766.png" width="240" height="240" alt="動く♪チワワの日常①のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">チワワ / 日常の返事 / 動くスタンプ</p><h3>動く♪チワワの日常①</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37575716/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37575716.png" width="240" height="240" alt="動く♪黒カニヘンダックスの日常①のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 日常の返事 / 動くスタンプ</p><h3>動く♪黒カニヘンダックスの日常①</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37329881/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329881.png" width="240" height="240" alt="ダックスの大きな文字・日常40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 日常の返事 / LINEスタンプ</p><h3>ダックスの大きな文字・日常40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="golden" data-words="keigo" data-status="selling"><a href="https://store.line.me/stickershop/product/37329676/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329676.png" width="240" height="240" alt="ゴールデンの丁寧な敬語40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ゴールデン / 丁寧な敬語 / LINEスタンプ</p><h3>ゴールデンの丁寧な敬語40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="keigo" data-status="selling"><a href="https://store.line.me/stickershop/product/37329675/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329675.png" width="240" height="240" alt="ダックスの大きな文字・丁寧な敬語40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 丁寧な敬語 / LINEスタンプ</p><h3>ダックスの大きな文字・丁寧な敬語40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="chihuahua" data-words="family" data-status="selling"><a href="https://store.line.me/stickershop/product/37329918/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329918.png" width="240" height="240" alt="チワワの家族連絡・大きな文字40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">チワワ / 家族連絡 / LINEスタンプ</p><h3>チワワの家族連絡・大きな文字40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="family" data-status="selling"><a href="https://store.line.me/stickershop/product/37352590/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37352590.png" width="240" height="240" alt="ブラックタンダックスの家族連絡40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 家族連絡 / LINEスタンプ</p><h3>ブラックタンダックスの家族連絡40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="dachshund" data-words="support" data-status="selling"><a href="https://store.line.me/stickershop/product/37419863/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37419863.png" width="240" height="240" alt="黒タンダックス やさしい気づかいと応援40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ダックス / 気づかい・応援 / LINEスタンプ</p><h3>黒タンダックス やさしい気づかいと応援40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="golden" data-words="support" data-status="selling"><a href="https://store.line.me/stickershop/product/37419875/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37419875.png" width="240" height="240" alt="ゴールデン やさしい気づかいと応援40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ゴールデン / 気づかい・応援 / LINEスタンプ</p><h3>ゴールデン やさしい気づかいと応援40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="golden" data-words="season" data-status="selling"><a href="https://store.line.me/stickershop/product/37442093/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37442093.png" width="240" height="240" alt="ゴールデン 冬と年末年始40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">ゴールデン / 季節の言葉 / LINEスタンプ</p><h3>ゴールデン 冬と年末年始40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article><article class="lume-work-card lume-stamp-card" data-breed="cat" data-words="camera daily" data-status="selling"><a href="https://store.line.me/stickershop/product/37329674/ja" target="_blank" rel="noopener noreferrer"><div class="lume-work-visual"><img src="assets/work-37329674.png" width="240" height="240" alt="カメラ好き茶トラ猫の日常40のスタンプ見本" loading="lazy" decoding="async"></div><div class="lume-work-info"><p class="lume-work-kind">茶トラ猫 / カメラ / LINEスタンプ</p><h3>カメラ好き茶トラ猫の日常40</h3><span class="lume-work-store">LINE STOREで見る <span aria-hidden="true">↗</span></span></div></a></article></div>
-<p id="stamp-empty" class="lume-stamp-empty" hidden>この組み合わせの見本は、まだ掲載していません。犬種か言葉を「すべて」にしてご覧ください。</p>
-<p class="lume-stamp-note">販売名義：にこっと小箱。ショップ未掲載の作品は制作サンプルとして紹介しています。</p>
-<div class="lume-work-footer"><p>ほかの絵柄やシリーズも、作者ショップでご覧いただけます。</p><div class="lume-shop-links"><a href="https://line.me/S/shop/sticker/author/6751697" target="_blank" rel="noopener noreferrer">スタンプ一覧を見る ↗</a><a href="https://line.me/S/shop/emoji/author/13138739" target="_blank" rel="noopener noreferrer">絵文字一覧を見る ↗</a></div></div>
-      <section id="stamp-request" class="lume-stamp-request" aria-labelledby="stamp-request-title">
-        <p class="lume-eyebrow">STAMP REQUEST</p>
-        <h3 id="stamp-request-title">こんなスタンプがほしい</h3>
-        <p>犬種や入れてほしい言葉、使いたい場面など、アイデアをひとことお聞かせください。</p>
-        <label for="stamp-request-text">スタンプのリクエスト（200文字まで）</label>
-        <textarea id="stamp-request-text" rows="3" maxlength="200" placeholder="例：ダックスで「今から帰る」がほしい"></textarea>
-        <a id="stamp-request-mail" class="lume-text-link" aria-disabled="true">メールの下書きを開く <span aria-hidden="true">↗</span></a>
-        <p class="lume-stamp-request-note">送信はメールアプリから行ってください。いただいたご希望は制作の参考にします。</p>
-        <noscript><p><a href="mailto:lumea.studio.works@gmail.com">メールでリクエストする</a></p></noscript>
-      </section>
-</div></section>
-
-    <section class="section lume-approach" id="approach" aria-labelledby="approach-title">
-      <div class="lume-wrap"><div class="section__head lume-section-heading" data-reveal="clip"><div><p class="lume-eyebrow">HOW I WORK</p><h2 id="approach-title">つくる前に、<br>目的をそろえる。</h2></div><p>まだ輪郭のないアイデアも、<br>ひとつずつ、かたちに。</p></div>
-      <ol class="lume-process" data-reveal-stagger="0.08"><li data-reveal="fade"><span class="lume-process-step">01 / LISTEN</span><h3>聞く・整理する</h3><p>何を伝えたいか。どこに手間がかかっているか。まだまとまらないアイデアも、会話から整理します。</p></li><li data-reveal="fade"><span class="lume-process-step">02 / CREATE</span><h3>かたちにする</h3><p>目的に合わせて構成・表現・動きを設計し、確認できるかたちに。イメージを共有しながら進めます。</p></li><li data-reveal="fade"><span class="lume-process-step">03 / REFINE</span><h3>確かめる・整える</h3><p>見る人、使う人の目線で確かめる。分かりやすさや使い心地を見直し、細部を整えます。</p></li></ol></div>
-    </section>
-
-    <section class="section lume-studio" id="studio" aria-labelledby="studio-title">
-      <div class="lume-wrap lume-studio-grid"><figure class="lume-studio-image" data-reveal="clip"><img src="assets/studio-light.png" width="1536" height="1024" alt="一室に差し込む光を紙の造形で表したブランドイメージ" loading="lazy" decoding="async"><figcaption>A ROOM FOR NEW POSSIBILITIES</figcaption></figure>
-      <div class="lume-studio-copy" data-reveal="fade" data-reveal-delay="0.1"><p class="lume-eyebrow">ABOUT THE STUDIO</p><h2 id="studio-title">ひらめきに、<br>居場所を。</h2><p>LUMEは光やひらめき。<br>Aには、ArtとRoom Aのイメージを重ねています。</p><p>名前に込めたのは、新しい可能性が生まれる一室のイメージです。技術と感性を行き来しながら、アイデアを次の一歩へつなぎます。</p><dl class="lume-studio-facts"><div><dt>NAME</dt><dd>LUME-A Studio<br><span>ルメアスタジオ</span></dd></div><div><dt>CONCEPT</dt><dd>デザインと技術が出会う、創造の一室。</dd></div><div><dt>FIELD</dt><dd>Web / Illustration / Excel VBA</dd></div></dl></div></div>
-    </section>
-
-    <section class="section lume-contact" id="contact" aria-labelledby="contact-title">
-      <div class="lume-wrap lume-contact-grid"><div class="section__head" data-reveal="clip"><p class="lume-eyebrow">LET’S CREATE SOMETHING</p><h2 id="contact-title">「こんなこと、<br>できる？」から。</h2></div><div class="lume-contact-copy" data-reveal="fade" data-reveal-delay="0.1"><p>ホームページをつくりたい。<br>イラストで想いを伝えたい。<br>いつもの作業を、少し楽にしたい。</p><p>何から話せばいいか迷ったら、相談シミュレーターへ。3つの質問から相談メモを作れます。</p><p><a class="lume-text-link" href="lp/#simulator">相談シミュレーターを開く <span aria-hidden="true">↗</span></a></p><div class="lume-mail-contact"><a class="lume-button lume-mail-button" href="mailto:lumea.studio.works@gmail.com?subject=LUME-A%20Studio%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"><span>メールで相談する</span><span class="lume-arrow" aria-hidden="true">↗</span></a><a class="lume-mail-address" href="mailto:lumea.studio.works@gmail.com?subject=LUME-A%20Studio%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">lumea.studio.works@gmail.com</a><p class="lume-mail-note">ボタンを押すと、お使いのメールアプリが開きます。<br>アドレスをコピーして送ることもできます。</p></div></div></div>
-    </section>
-  </main>
-  <footer class="lume-footer">
-    <div class="lume-wrap"><div class="lume-footer-top"><div><a class="lume-footer-brand" href="#top" aria-label="LUME-A Studio トップへ"><img src="assets/lume-a-wordmark.png" alt="LUME-A Studio" width="720" height="277" loading="lazy"></a><p>デザインと技術が出会う、創造の一室。</p><span class="lume-footer-tagline">Design &amp; Development</span></div><nav aria-label="フッターナビゲーション"><a href="#services">Services <small>できること</small></a><a href="#works">Works <small>作品集</small></a><a href="#approach">Approach <small>つくり方</small></a><a href="#studio">Studio <small>アトリエについて</small></a><a href="#contact">Contact <small>ご相談について</small></a></nav></div>
-    <details class="lume-privacy"><summary>Privacy &amp; Site Information <span>このサイトについて</span></summary><div><p>この確認版サイトには、お問い合わせフォーム、アクセス解析、広告配信の機能を設置していません。制作領域の画像は、内容を紹介するためのイメージです。</p><p>お問い合わせはメールで承ります。サイト上で入力内容を送信するフォームは設置していません。</p></div></details>
-    <div class="lume-footer-bottom"><p>© 2026 LUME-A Studio</p><a href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a></div></div>
-  </footer>
-  <script src="script.js" defer></script>
-  <script src="custom.js" defer></script>
-  <script src="stamps-v9.js" defer></script>
-  <script src="stamp-request.js" defer></script>
+<script src="works.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
