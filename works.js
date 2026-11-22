@@ -14,7 +14,7 @@ window.LUMEA_WORKS = {
     { title: "MINATO WORKS", kind: "企業型HP・3ページ", note: "事業案内・会社情報・問い合わせをまとめた企業サイト。", thumb: "works/hp-minato.webp", href: "samples/hp-minato/index.html" },
     { title: "SEREIN", kind: "美容サロン型HP・動きあり", note: "静かな動きと予約の操作例を備えたサロンサイト。", thumb: "works/hp-serein.webp", href: "samples/hp-serein/index.html" },
     { title: "PULSE CITY", kind: "イベント型HP・動きあり", note: "常に動く演出と時間帯の切り替えを体験。", thumb: "works/hp-pulse.webp", href: "samples/hp-pulse/index.html" },
-    { title: "YORIMICHI MARKET", kind: "街歩きイベント型HP・動きあり", note: "歩く人が行き交う街と、昼夜の切り替えを体験。", thumb: "works/hp-yorimichi.webp", href: "samples/hp-yorimichi/index.html" },
+    { title: "YORIMICHI MARKET", kind: "街歩きイベント型HP・実写動画", note: "人が行き交う夜の街を、映像で体験。", thumb: "works/hp-yorimichi.webp", href: "samples/hp-yorimichi/index.html" },
     { title: "クリーンホーム", kind: "清掃・見積もり案内LP", note: "料金と依頼の流れを見せて、相談へつなぐページ。", thumb: "works/lp-clean.webp", href: "samples/clean/index.html" },
     { title: "PERSONAL GYM FIT", kind: "ジム・体験案内LP", note: "体験内容・プラン・申込の流れを分かりやすく。", thumb: "works/lp-gym.webp", href: "samples/gym/index.html" },
     { title: "nail salon nico", kind: "美容サロン・予約案内LP", note: "施術写真・料金・予約の流れを、ひとつのページに。", thumb: "works/lp-nico.webp", href: "samples/nico/index.html" },
