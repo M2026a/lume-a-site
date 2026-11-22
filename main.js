@@ -24,7 +24,7 @@
     body.appendChild(el('span', 'card__kind', w.kind + '／自主制作'));
     body.appendChild(el('span', 'card__title', w.title));
     body.appendChild(el('span', 'card__note', w.note));
-    body.appendChild(el('span', 'card__play', 'ページを開く ↗'));
+    body.appendChild(el('span', 'card__play', 'サイトを体験する ↗'));
     a.appendChild(img); a.appendChild(body); li.appendChild(a); listA.appendChild(li);
   });
 
@@ -34,6 +34,7 @@
   var listB = document.getElementById('typeB');
   data.typeB.forEach(function (w) {
     var li = el('li');
+    li.setAttribute('data-cat', w.cat || '');
     var b = el('button', 'card');
     b.type = 'button';
     var img = el('img', 'card__img');
@@ -42,13 +43,65 @@
     var body = el('span', 'card__body');
     body.appendChild(el('span', 'card__kind', w.kind));
     body.appendChild(el('span', 'card__title', w.title));
-    body.appendChild(el('span', 'card__play', w.video ? '▶ 縦動画とLPを見る' : 'LPを見る'));
+    body.appendChild(el('span', 'card__play', w.video ? '▶ デザイン・動画を見る' : 'デザインを見る'));
     b.appendChild(img); b.appendChild(body);
     b.addEventListener('click', function () { openViewer(w); });
     li.appendChild(b); listB.appendChild(li);
   });
 
+  // 件数
+  var count = document.getElementById('galleryCount');
+  if (count) count.textContent = '映像で見るLPデザイン ' + data.typeB.length + '本　／　開いて体験するWebサイト ' + data.typeA.length + '本';
+
+  // 絞り込み
+  var filters = document.getElementById('filters');
+  var cats = ['すべて'].concat(data.categories || []);
+  cats.forEach(function (c, i) {
+    var b = el('button', '', c);
+    b.type = 'button';
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      filters.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      listB.querySelectorAll('li').forEach(function (li) { li.hidden = !(i === 0 || li.getAttribute('data-cat') === c); });
+    });
+    filters.appendChild(b);
+  });
+
+  // 縦動画の帯：画面に入ったものだけ再生し、外れたら止める
+  var reel = document.getElementById('reel');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reelVideos = [];
+  data.typeB.filter(function (w) { return w.reel && w.video; }).forEach(function (w) {
+    var li = el('li');
+    var b = el('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', w.title + 'のデザインと動画を見る');
+    var v = el('video');
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none';
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    v.poster = w.thumb;
+    v.setAttribute('data-src', w.video);
+    b.appendChild(v);
+    b.appendChild(el('span', '', w.title));
+    b.addEventListener('click', function () { openViewer(w); });
+    li.appendChild(b); reel.appendChild(li);
+    reelVideos.push(v);
+  });
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.src) v.src = v.getAttribute('data-src');
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else { v.pause(); }
+      });
+    }, { threshold: 0.6 });
+    reelVideos.forEach(function (v) { rio.observe(v); });
+  }
+
   function openViewer(w) {
+    reelVideos.forEach(function (v) { v.pause(); });
     document.getElementById('viewerKind').textContent = w.kind;
     document.getElementById('viewerTitle').textContent = w.title;
     var full = document.getElementById('viewerFull');

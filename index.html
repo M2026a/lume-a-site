@@ -52,42 +52,57 @@
     </div>
   </section>
 
-  <section class="sec" id="concerns">
+  <section class="sec" id="concerns" data-no="02" data-name="よくある悩み">
     <div class="shot">
       <img src="images/02-pain.webp" width="1024" height="1792" loading="lazy" alt="いい仕事をしているのに、ちゃんと伝わっていない。小さなお店や事業で、よく聞く3つのもったいない。01 お店のよさが、ページから伝わらない。02 スマホで見ると、とても読みにくい。03 毎月のExcel作業に、時間がとられる。伝えることと、手間を減らすこと。どちらも、ひとつのアトリエで。">
     </div>
   </section>
 
-  <section class="sec" id="services">
+  <section class="sec" id="services" data-no="03" data-name="できること">
     <div class="shot">
       <img src="images/03-offer.webp" width="1024" height="1792" loading="lazy" alt="見せる仕事と、減らす仕事。01 伝えるデザイン：ホームページ・LP。02 伝えるデザイン：バナー・縦動画。03 仕事を軽くする仕組み：業務アプリ・ダッシュボード。04 仕事を軽くする仕組み：Excel VBAの小さな改善。イラストやLINEスタンプの制作も行っています。">
     </div>
   </section>
 
-  <section class="sec" id="works">
+  <section class="sec" id="works" data-no="04" data-name="作品">
     <div class="shot">
-      <img src="images/04-works.webp" width="1024" height="1792" loading="lazy" alt="WORKS。業種に合わせて、かたちを変える。TYPE A さわれるWebページ：ページを移動できるHP・LPを、公開できるかたちでお作りします。TYPE B LPデザイン＋縦動画：販売ページや申込ページを、完成デザインと縦動画で。">
+      <img src="images/04-works.webp" width="1024" height="1792" loading="lazy" alt="WORKS。業種に合わせて、かたちを変える。開いて体験できるWebサイトと、映像で見るLPデザイン。2つのタイプで制作しています。TYPE A 開いて体験するWebサイト：実際に開いて操作できるHP・LPを、公開できるかたちでお作りします。TYPE B 映像で見るLPデザイン：ビジュアルと縦動画で見せる、LPのデザイン。この下に、実際の見本を並べています。">
     </div>
     <div class="panel panel--dark">
-      <div class="panel__in">
-        <h2 class="ph"><span class="ph__en">TYPE A</span>さわれるWebページ</h2>
-        <p class="pl">ページを移動できる見本です。タップすると開きます。</p>
-        <ul class="grid grid--a" id="typeA"></ul>
-        <h2 class="ph"><span class="ph__en">TYPE B</span>LPデザイン＋縦動画</h2>
-        <p class="pl">タップすると、縦動画とLPの全体を見られます。</p>
+      <div class="panel__in gallery" aria-labelledby="galleryTitle">
+        <div class="gallery__head">
+          <p class="gallery__en">WORKS GALLERY</p>
+          <h2 class="gallery__title" id="galleryTitle">作品ギャラリー</h2>
+          <p class="gallery__lead">ここから下は、制作した見本の展示です。<br class="pc">TYPE Bは映像とデザインを、TYPE Aは実際に開いて体験できます。</p>
+          <p class="gallery__count" id="galleryCount"></p>
+        </div>
+
+        <h3 class="ph"><span class="ph__en">MOVIE</span>縦動画</h3>
+        <p class="pl">LPのデザインを、そのまま縦動画にしています。</p>
+        <ul class="reel" id="reel" aria-label="縦動画の一覧"></ul>
+
+        <h3 class="ph"><span class="ph__en">TYPE B</span>映像で見るLPデザイン</h3>
+        <p class="pl">ビジュアルと縦動画で見せるLPの制作例です。世界観・見せ方・映像表現をご覧ください。</p>
+        <div class="filters" id="filters" role="group" aria-label="業種で絞り込む"></div>
         <ul class="grid grid--b" id="typeB"></ul>
+
+        <h3 class="ph"><span class="ph__en">TYPE A</span>開いて体験するWebサイト</h3>
+        <p class="pl">実際に開いて操作できるHP・LPです。ページの移動や使いやすさを、そのまま確かめられます。</p>
+        <ul class="grid grid--a" id="typeA"></ul>
+
         <p class="note">※掲載している制作見本は、すべて架空の自主制作です。業種・目的・ページ構成の見本として掲載しています。</p>
+        <p class="gallery__end" aria-hidden="true">— 作品ギャラリーはここまで —</p>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="flow">
+  <section class="sec" id="flow" data-no="05" data-name="制作の流れ">
     <div class="shot">
       <img src="images/05-flow.webp" width="1024" height="1792" loading="lazy" alt="HOW I WORK。つくる前に、目的をそろえる。1 LISTEN 聞く・整理する：何を伝えたいか、どこに手間があるか。会話から一緒に整理します。2 CREATE かたちにする：目的に合わせて構成と表現を設計し、確認できるかたちでお見せします。3 REFINE 確かめる・整える：見る人・使う人の目線で確かめ、細部まで整えて仕上げます。">
     </div>
   </section>
 
-  <section class="sec" id="stamps">
+  <section class="sec" id="stamps" data-no="06" data-name="LINEスタンプ">
     <div class="shot">
       <img src="images/06-stamps.webp" width="1024" height="1792" loading="lazy" alt="LINE STICKERS。イラストのLINEスタンプ、販売中は19点。犬種と言葉の種類から選べる、日常づかいのスタンプです。販売名義はにこっと小箱です。日常の返事、丁寧な敬語、家族連絡。犬種：チワワ、ダックス、ゴールデン、トイプードル、バーニーズ、シェルティほか。">
     </div>
@@ -104,13 +119,13 @@
     </div>
   </section>
 
-  <section class="sec" id="faq">
+  <section class="sec" id="faq" data-no="07" data-name="よくある質問">
     <div class="shot">
       <img src="images/07-faq.webp" width="1024" height="1792" loading="lazy" alt="よくいただく、4つの質問。Q 何から話せばいいか、まとまっていません。A 大丈夫です。3つの質問に答える相談シミュレーターで、相談メモを作れます。Q Excelのどんな作業を相談できますか？ A 毎月の集計、一覧の転記、決まった書式への入力など。作業の流れとExcel環境を伺い、対応できるかお答えします。Q 掲載の見本は、実在のお店ですか？ A すべて架空の自主制作です。業種・目的・ページ構成の見本として掲載しています。Q イラストやLINEスタンプも頼めますか？ A はい。用途に合わせて、表情や言葉の温度感を整えてお作りします。">
     </div>
   </section>
 
-  <section class="sec" id="contact">
+  <section class="sec" id="contact" data-no="08" data-name="相談する">
     <div class="shot">
       <img src="images/08-cta.webp" width="1024" height="1792" loading="lazy" alt="「こんなこと、できる？」から。まだ形になっていない相談も、歓迎です。3つの質問に答えると、相談メモができます。">
       <a class="hit" style="left:7%;top:80%;width:86%;height:6.2%" href="consult/">相談シミュレーターを開く（約1分）</a>

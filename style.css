@@ -55,6 +55,54 @@ h1, h2, h3, .ph { word-break: auto-phrase; text-wrap: balance; line-break: stric
 /* 画像のセクション */
 .sec { scroll-margin-top: 56px; }
 .shot { position: relative; max-width: var(--w); margin: 0 auto; }
+
+/* パートの区切り：番号と名前の細い帯 */
+.sec[data-no]::before {
+  content: attr(data-no) "　" attr(data-name);
+  display: flex; align-items: center; gap: 12px; max-width: var(--w); margin: 0 auto; height: 44px; padding: 0 16px;
+  background: var(--ink); color: var(--gold); font-family: var(--serif); font-size: 13px; letter-spacing: .25em;
+  border-top: 1px solid rgba(200, 168, 122, .35);
+  background-image: linear-gradient(90deg, transparent, rgba(200, 168, 122, .08) 50%, transparent);
+}
+
+/* 作品ギャラリー：HPのパートとは別の「展示室」として枠で囲む */
+.gallery {
+  border: 1px solid rgba(200, 168, 122, .45); outline: 1px solid rgba(200, 168, 122, .15); outline-offset: 5px;
+  padding: 28px 16px 24px; margin-top: 24px; background: #202328;
+}
+@media (min-width: 600px) { .gallery { padding: 40px 32px 32px; } }
+.gallery__head { text-align: center; padding-bottom: 24px; border-bottom: 1px solid rgba(200, 168, 122, .25); }
+.gallery__en { margin: 0; font-family: var(--serif); font-size: 12px; letter-spacing: .4em; color: var(--gold); }
+.gallery__title { margin: 6px 0 10px; font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.4; }
+.gallery__lead { margin: 0 auto; max-width: 34em; font-size: 15px; color: var(--gray); word-break: keep-all; overflow-wrap: anywhere; }
+@media (max-width: 599px) { .gallery__lead br.pc { display: none; } }
+.gallery__count { margin: 12px 0 0; font-size: 13px; color: var(--gold); letter-spacing: .08em; }
+.gallery__end { margin: 24px 0 0; text-align: center; font-family: var(--serif); font-size: 12px; letter-spacing: .3em; color: rgba(200, 168, 122, .6); }
+
+/* 縦動画の帯（画面に入ったものだけ自動再生） */
+.reel {
+  list-style: none; margin: 0 -16px; padding: 4px 16px 12px; display: flex; gap: 12px; overflow-x: auto;
+  scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: rgba(200, 168, 122, .4) transparent;
+}
+@media (min-width: 600px) { .reel { margin: 0; padding: 4px 0 12px; } }
+.reel li { flex: 0 0 auto; width: min(42vw, 180px); scroll-snap-align: start; }
+.reel button { display: block; width: 100%; padding: 0; border: 1px solid rgba(200, 168, 122, .3); background: #000; cursor: pointer; color: inherit; font: inherit; text-align: left; }
+.reel button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.reel video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.reel span { display: block; padding: 6px 8px; font-size: 12px; line-height: 1.5; color: var(--cream); background: #2C2F35; }
+
+/* 絞り込み */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.filters button {
+  min-height: 40px; padding: 0 14px; border: 1px solid rgba(200, 168, 122, .45); border-radius: 999px; background: none;
+  color: var(--cream); font: inherit; font-size: 13px; cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--gold-d); border-color: var(--gold-d); color: #fff; }
+.grid--b li[hidden] { display: none; }
+
+/* LPのサムネイルは額装した作品のように（生成りのマット） */
+.grid--b .card { background: #2C2F35; }
+.grid--b .card__img { border: 6px solid #EFE8DC; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); width: calc(100% - 20px); margin: 10px 10px 0; }
 .shot img { width: 100%; }
 .hit { position: absolute; display: block; overflow: hidden; color: transparent; font-size: 1px; border-radius: 2px; }
 .hit:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }

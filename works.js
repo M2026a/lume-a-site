@@ -1,28 +1,37 @@
 /*
   制作見本とLINEスタンプの一覧。
   作品を足す・入れ替えるときは、この配列だけを書き換えます（HTMLは触らなくて大丈夫です）。
-  - TYPE A：さわれるWebページ（href にページへのリンク）
-  - TYPE B：LPデザイン＋縦動画（video があれば再生、full でLP全体の画像）
+  - TYPE A：開いて体験するWebサイト（href にページへのリンク）
+  - TYPE B：映像で見るLPデザイン（video があれば再生、full でLP全体の画像）
+      cat：絞り込みの分類（categories のどれか）
+      reel：true にすると、作品ギャラリーの上の「縦動画の帯」で自動再生する（6本くらいまで）
 */
 window.LUMEA_WORKS = {
+  categories: ["教室・講座", "物販・定期便", "店舗・サービス", "イベント・アプリ"],
   typeA: [
     { title: "café muku", kind: "店舗型HP・3ページ", note: "トップ・メニュー・お店について。写真で伝える店舗サイト。", thumb: "works/hp-muku.webp", href: "samples/hp-muku/index.html" },
     { title: "クリーンホーム", kind: "地域サービス型HP・3ページ", note: "サービス・料金・依頼の流れから、相談画面まで。", thumb: "works/hp-clean.webp", href: "samples/hp-clean/index.html" },
     { title: "MINATO WORKS", kind: "企業型HP・3ページ", note: "事業案内・会社情報・問い合わせをまとめた企業サイト。", thumb: "works/hp-minato.webp", href: "samples/hp-minato/index.html" },
+    { title: "SEREIN", kind: "美容サロン型HP・動きあり", note: "静かな動きと予約の操作例を備えたサロンサイト。", thumb: "works/hp-serein.webp", href: "samples/hp-serein/index.html" },
+    { title: "PULSE CITY", kind: "イベント型HP・動きあり", note: "常に動く演出と時間帯の切り替えを体験。", thumb: "works/hp-pulse.webp", href: "samples/hp-pulse/index.html" },
     { title: "クリーンホーム", kind: "清掃・見積もり案内LP", note: "料金と依頼の流れを見せて、相談へつなぐページ。", thumb: "works/lp-clean.webp", href: "samples/clean/index.html" },
     { title: "PERSONAL GYM FIT", kind: "ジム・体験案内LP", note: "体験内容・プラン・申込の流れを分かりやすく。", thumb: "works/lp-gym.webp", href: "samples/gym/index.html" },
     { title: "nail salon nico", kind: "美容サロン・予約案内LP", note: "施術写真・料金・予約の流れを、ひとつのページに。", thumb: "works/lp-nico.webp", href: "samples/nico/index.html" },
     { title: "café muku", kind: "カフェ・店舗紹介LP", note: "写真とメニューで、お店の雰囲気を伝えるページ。", thumb: "works/lp-muku.webp", href: "samples/muku/index.html" }
   ],
   typeB: [
-    { title: "夜のハーブティー", kind: "物販・ハーブティー", thumb: "works/herbtea.webp", full: "works/herbtea-full.webp", video: "videos/herbtea.mp4" },
-    { title: "金継ぎ教室", kind: "教室・大人の習いごと", thumb: "works/kintsugi.webp", full: "works/kintsugi-full.webp", video: "videos/kintsugi.mp4" },
-    { title: "大人のはじめてのバレエ", kind: "スクール・体験レッスン", thumb: "works/ballet.webp", full: "works/ballet-full.webp", video: "videos/ballet.mp4" },
-    { title: "親子の星空キャンプ", kind: "イベント・参加募集", thumb: "works/hoshizora.webp", full: "works/hoshizora-full.webp", video: "videos/hoshizora.mp4" },
-    { title: "Excel VBA講座", kind: "オンライン講座", thumb: "works/teijimacro.webp", full: "works/teijimacro-full.webp", video: "videos/teijimacro.mp4" },
-    { title: "シフト表アプリ", kind: "業務アプリ・飲食店向け", thumb: "works/shiftpon.webp", full: "works/shiftpon-full.webp", video: "videos/shiftpon.mp4" },
-    { title: "冷凍おかずの定期便", kind: "食品・定期便", thumb: "works/totonoe.webp", full: "works/totonoe-full.webp", video: "videos/totonoe.mp4" },
-    { title: "一日一組の宿", kind: "宿・予約", thumb: "works/yururi.webp", full: "works/yururi-full.webp", video: "videos/yururi.mp4" }
+    { title: "夜のハーブティー", kind: "物販・ハーブティー", cat: "物販・定期便", reel: true, thumb: "works/herbtea.webp", full: "works/herbtea-full.webp", video: "videos/herbtea.mp4" },
+    { title: "金継ぎ教室", kind: "教室・大人の習いごと", cat: "教室・講座", reel: true, thumb: "works/kintsugi.webp", full: "works/kintsugi-full.webp", video: "videos/kintsugi.mp4" },
+    { title: "一日一組の宿", kind: "宿・予約", cat: "店舗・サービス", reel: true, thumb: "works/yururi.webp", full: "works/yururi-full.webp", video: "videos/yururi.mp4" },
+    { title: "シフト表アプリ", kind: "業務アプリ・飲食店向け", cat: "イベント・アプリ", reel: true, thumb: "works/shiftpon.webp", full: "works/shiftpon-full.webp", video: "videos/shiftpon.mp4" },
+    { title: "町の自転車屋 冬の点検フェア", kind: "店舗・キャンペーン", cat: "店舗・サービス", reel: true, thumb: "works/jitensha.webp", full: "works/jitensha-full.webp", video: "videos/jitensha.mp4" },
+    { title: "大人のはじめてのバレエ", kind: "スクール・体験レッスン", cat: "教室・講座", reel: true, thumb: "works/ballet.webp", full: "works/ballet-full.webp", video: "videos/ballet.mp4" },
+    { title: "親子の星空キャンプ", kind: "イベント・参加募集", cat: "イベント・アプリ", thumb: "works/hoshizora.webp", full: "works/hoshizora-full.webp", video: "videos/hoshizora.mp4" },
+    { title: "LINE公式アカウント入門ウェビナー", kind: "ウェビナー・無料参加", cat: "教室・講座", thumb: "works/mise-webinar.webp", full: "works/mise-webinar-full.webp", video: "videos/mise-webinar.mp4" },
+    { title: "Excel VBA講座", kind: "オンライン講座", cat: "教室・講座", thumb: "works/teijimacro.webp", full: "works/teijimacro-full.webp", video: "videos/teijimacro.mp4" },
+    { title: "冷凍おかずの定期便", kind: "食品・定期便", cat: "物販・定期便", thumb: "works/totonoe.webp", full: "works/totonoe-full.webp", video: "videos/totonoe.mp4" },
+    { title: "プロフィール写真の撮影", kind: "写真スタジオ・予約", cat: "店舗・サービス", thumb: "works/hikariphoto.webp", full: "works/hikariphoto-full.webp", video: "videos/hikariphoto.mp4" },
+    { title: "シニア猫のペットシッター", kind: "訪問サービス・事前相談", cat: "店舗・サービス", thumb: "works/nyagomi.webp", full: "works/nyagomi-full.webp", video: "videos/nyagomi.mp4" }
   ],
   stamps: [
     { title: "動く♪バーニーズの日常①", tag: "バーニーズ / 日常の返事 / 動くスタンプ", img: "stamps/work-37800771.webp", href: "https://store.line.me/stickershop/product/37800771/ja" },
