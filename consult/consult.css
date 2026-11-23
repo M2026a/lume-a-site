@@ -107,5 +107,17 @@
 .c-memo__note { margin: 14px 0 0; font-size: 12px; line-height: 1.8; color: var(--sumi-2); }
 .c-memo__status { margin: 6px 0 0; min-height: 1.5em; font-size: 13px; color: var(--gold-d); }
 
+.c-flow { border-top: 1px solid rgba(200, 168, 122, .24); background: #23262B; }
+.c-flow__inner { max-width: 1040px; margin: auto; padding: 62px 16px 70px; }
+.c-flow h2 { margin: 0 0 30px; color: var(--cream); font-family: var(--serif); font-size: clamp(25px, 4vw, 35px); font-weight: 300; }
+.c-flow__steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.c-flow__steps li { min-width: 0; border-top: 1px solid var(--gold); padding-top: 16px; }
+.c-flow__no { display: block; color: var(--gold); font: 22px var(--serif); margin-bottom: 15px; }
+.c-flow h3 { color: var(--cream); font-size: 17px; font-weight: 400; margin: 0 0 10px; }
+.c-flow__steps p { color: #CFC6B8; font-size: 13px; line-height: 1.8; margin: 0; }
+.c-flow__note { color: #CFC6B8; margin: 28px 0 0; font-size: 12px; }
+@media (max-width: 800px) { .c-flow__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .c-flow__steps { grid-template-columns: 1fr; gap: 18px; } .c-flow__steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 8px; } .c-flow__no { grid-row: span 2; margin: 0; } .c-flow h3 { margin: 0 0 4px; } }
+
 .consult .foot { padding-bottom: 48px; }
 .consult .foot a { color: var(--cream); }
